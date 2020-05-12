@@ -47,5 +47,3 @@ for (let i = 0; i < fontInfo.length; i++) {
 
   main.appendChild(div);
 }
-
-console.log(main);
