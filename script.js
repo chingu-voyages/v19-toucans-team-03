@@ -14,15 +14,16 @@ const fontInfo = [
   { fontFamily: 'Roboto Mono', designer: 'Christian Robertson' },
   { fontFamily: 'Roboto Slab', designer: 'Christian Robertson' },
 ];
-let sampleText = 'Then came the night of the first falling star.';
 
 // Creating font cards
 const main = document.querySelector('main');
 
+let info, p;
+
 for (let i = 0; i < fontInfo.length; i++) {
-  let info = document.createTextNode(`${fontInfo[i].fontFamily}`);
+  info = document.createTextNode(`${fontInfo[i].fontFamily}`);
   const div = document.createElement('div');
-  let p = document.createElement('p');
+  p = document.createElement('p');
   p.appendChild(info);
   div.appendChild(p);
 
@@ -37,6 +38,7 @@ for (let i = 0; i < fontInfo.length; i++) {
   icon.setAttributeNode(iconClass);
   div.appendChild(icon);
 
+  sampleText = 'Then came the night of the first falling star.';
   info = document.createTextNode(`${sampleText}`);
   p = document.createElement('p');
   p.appendChild(info);
@@ -47,3 +49,17 @@ for (let i = 0; i < fontInfo.length; i++) {
 
   main.appendChild(div);
 }
+
+// Changes sample text to provided input
+const selectedInput = document.getElementById('sampleInput');
+selectedInput.addEventListener('input', (event) => {
+  if (selectedInput.value === 'Type something' || selectedInput.value === '') {
+    sampleText = 'Then came the night of the first falling star.';
+  } else {
+    sampleText = event.target.value;
+  }
+  sampleP = document.querySelectorAll('p:nth-child(4)');
+  for (let i = 0; i < sampleP.length; i++) {
+    sampleP[i].textContent = sampleText;
+  }
+});
