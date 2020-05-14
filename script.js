@@ -18,12 +18,10 @@ const fontInfo = [
 // Creating font cards
 const main = document.querySelector('main');
 
-let info, p;
-
 for (let i = 0; i < fontInfo.length; i++) {
-  info = document.createTextNode(`${fontInfo[i].fontFamily}`);
+  let info = document.createTextNode(`${fontInfo[i].fontFamily}`);
   const div = document.createElement('div');
-  p = document.createElement('p');
+  let p = document.createElement('p');
   p.appendChild(info);
   div.appendChild(p);
 
