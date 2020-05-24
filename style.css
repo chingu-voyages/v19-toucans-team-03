@@ -1,15 +1,13 @@
 .navbar {
   width: 100%;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+  color: #7e8187;
 }
 
 .nav-title {
   display: inline-block;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
 }
 
 .nav-links {
@@ -21,4 +19,32 @@
   display: inline-block;
   list-style-type: none;
   margin-right: 15px;
+}
+
+.togglebar {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  border: 1px solid #7e8187;
+  border-radius: 25px;
+}
+
+.toggle-search {
+  display: flex;
+  margin: 0;
+}
+
+.toggle-search li {
+  list-style-type: none;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+input {
+  color: #7e8187;
+  border: none;
+}
+
+#font-size {
+  border: none;
 }
