@@ -1,0 +1,24 @@
+.navbar {
+  width: 100%;
+  align-items: center;
+}
+
+.nav-title {
+  display: inline-block;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  padding-left: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 15px;
+}
