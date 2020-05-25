@@ -13,9 +13,9 @@
 
   <body>
     <header>
-      Google Fonts
-      <nav>
-        <ul>
+      <nav class="navbar">
+        <p class="nav-title">Google Fonts</p>
+        <ul class="nav-links">
           <li>Catalog</li>
           <li>Featured</li>
           <li>Articles</li>
@@ -23,8 +23,8 @@
         </ul>
       </nav>
     </header>
-    <nav>
-      <ul>
+    <div class="togglebar">
+      <ul class="toggle-search">
         <li>
           <input type="text" value="Search" aria-label="Search" />
         </li>
@@ -38,7 +38,10 @@
         </li>
         <li>
           <select id="font-size">
-            <option value="32">32px</option>
+            <option value="20">20px</option>
+            <option value="24">24px</option>
+            <option value="32" selected>32px</option>
+            <option value="40">40px</option>
           </select>
         </li>
         <li>
@@ -48,15 +51,16 @@
           <a href="#"><i class="far fa-circle"></i></a>
         </li>
         <li>
-          <a href="#"
-            ><i class="fas fa-list-ul"></i><br /><i class="fas fa-th"></i
-          ></a>
+          <a href="#"><i class="fas fa-list-ul"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-th"></i></a>
         </li>
         <li>
           <a href="#"><i class="fas fa-redo"></i></a>
         </li>
       </ul>
-    </nav>
+    </div>
     <main></main>
     <footer>
       Coded by <a href="https://github.com/elloo">Ewe Lin Loo</a> and
