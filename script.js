@@ -51,6 +51,7 @@ for (let i = 0; i < fontInfo.length; i++) {
 }
 
 // Changes sample text to provided input
+sampleP = document.querySelectorAll('p:nth-child(4)')
 const selectedInput = document.getElementById('sampleInput')
 selectedInput.addEventListener('input', (event) => {
   if (selectedInput.value === 'Type something' || selectedInput.value === '') {
@@ -58,7 +59,6 @@ selectedInput.addEventListener('input', (event) => {
   } else {
     sampleText = event.target.value
   }
-  sampleP = document.querySelectorAll('p:nth-child(4)')
   for (let i = 0; i < sampleP.length; i++) {
     sampleP[i].textContent = sampleText
   }
@@ -66,5 +66,8 @@ selectedInput.addEventListener('input', (event) => {
 
 // Changes sample text to selected size
 selectedSize.addEventListener('change', (event) => {
-  console.log('SELECTEDSIZE: ', selectedSize.value)
+  for (i = 0; i < sampleP.length; i++) {
+    let sampleStyle = sampleP[i].getAttributeNode('style')
+    sampleStyle.value = `font-family: ${fontInfo[i].fontFamily}; font-size: ${event.target.value}px`
+  }
 })
