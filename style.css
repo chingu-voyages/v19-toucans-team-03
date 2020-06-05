@@ -2,6 +2,11 @@ header, footer {
   font-family: 'Roboto', sans-serif;
 }
 
+#favouriteFonts {
+  background-color: white;
+  color: black;
+}
+
 .navbar {
   width: 100%;
   align-items: center;
@@ -51,4 +56,13 @@ input {
 
 #font-size {
   border: none;
+}
+
+.toggleTheme {
+  border: none;
+  background-color: transparent;
+}
+
+footer p {
+  text-align: center;
 }

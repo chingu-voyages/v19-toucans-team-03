@@ -71,3 +71,15 @@ selectedSize.addEventListener('change', (event) => {
     sampleStyle.value = `font-family: ${fontInfo[i].fontFamily}; font-size: ${event.target.value}px`
   }
 })
+
+//Toggle dark theme
+function darkTheme() {
+  document.getElementById('favouriteFonts').style.backgroundColor = "black";
+  document.getElementById('favouriteFonts').style.color = "white";
+}
+
+//Toggle light theme
+function lightTheme() {
+  document.getElementById('favouriteFonts').style.backgroundColor = "white";
+  document.getElementById('favouriteFonts').style.color = "black";
+}
