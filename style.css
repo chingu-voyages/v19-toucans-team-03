@@ -52,10 +52,12 @@ header, footer {
 input {
   color: #7e8187;
   border: none;
+  padding-right: 10rem;
 }
 
 #font-size {
   border: none;
+  padding-right: 3rem;
 }
 
 .toggleTheme {
@@ -63,6 +65,31 @@ input {
   background-color: transparent;
 }
 
+
+.list-view, .grid-view, .reset {
+  border: none;
+  background-color: transparent;
+}
+
+.views {
+  display: flex;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.reset {
+  padding-right: 3rem;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 3px #666;
+}
+
 footer p {
   text-align: center;
+}
+
+footer p a {
+  text-decoration: none;
 }
