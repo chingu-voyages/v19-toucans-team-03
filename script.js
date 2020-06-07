@@ -74,12 +74,12 @@ selectedSize.addEventListener('change', (event) => {
 
 //Toggle dark theme
 function darkTheme() {
-  document.getElementById('favouriteFonts').style.backgroundColor = "black";
-  document.getElementById('favouriteFonts').style.color = "white";
+  document.querySelector('body').style.backgroundColor = 'black'
+  document.querySelector('body').style.color = 'white'
 }
 
 //Toggle light theme
 function lightTheme() {
-  document.getElementById('favouriteFonts').style.backgroundColor = "white";
-  document.getElementById('favouriteFonts').style.color = "black";
+  document.querySelector('body').style.backgroundColor = 'white'
+  document.querySelector('body').style.color = 'black'
 }
