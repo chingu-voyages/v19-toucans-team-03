@@ -71,3 +71,15 @@ selectedSize.addEventListener('change', (event) => {
     sampleStyle.value = `font-family: ${fontInfo[i].fontFamily}; font-size: ${event.target.value}px`
   }
 })
+
+//Toggle dark theme
+function darkTheme() {
+  document.querySelector('body').style.backgroundColor = 'black'
+  document.querySelector('body').style.color = 'white'
+}
+
+//Toggle light theme
+function lightTheme() {
+  document.querySelector('body').style.backgroundColor = 'white'
+  document.querySelector('body').style.color = 'black'
+}
