@@ -1,4 +1,5 @@
-header, footer {
+header,
+footer {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -65,8 +66,21 @@ input {
   background-color: transparent;
 }
 
+#lightCircle {
+  color: white;
+  border-radius: 50%;
+  border: solid 1px black;
+}
 
-.list-view, .grid-view, .reset {
+#darkCircle {
+  color: black;
+  border-radius: 50%;
+  border: solid 1px white;
+}
+
+.list-view,
+.grid-view,
+.reset {
   border: none;
   background-color: transparent;
 }
