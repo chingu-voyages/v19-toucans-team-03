@@ -68,11 +68,14 @@ selectedInput.addEventListener('input', (event) => {
 })
 
 // Changes sample text to selected size
-selectedSize.addEventListener('change', (event) => {
+function setSize(num) {
   for (i = 0; i < sampleP.length; i++) {
     let sampleStyle = sampleP[i].getAttributeNode('style')
-    sampleStyle.value = `font-family: ${fontInfo[i].fontFamily}; font-size: ${event.target.value}px`
+    sampleStyle.value = `font-family: ${fontInfo[i].fontFamily}; font-size: ${num}px`
   }
+}
+selectedSize.addEventListener('change', (event) => {
+  setSize(event.target.value)
 })
 
 //Toggle dark theme
@@ -93,10 +96,7 @@ resetBtn.addEventListener('click', () => {
   selectedInput.value = ''
   setSampleText()
 
-  for (i = 0; i < sampleP.length; i++) {
-    let sampleStyle = sampleP[i].getAttributeNode('style')
-    sampleStyle.value = `font-family: ${fontInfo[i].fontFamily}; font-size: 32px`
-  }
+  setSize(32)
   document.getElementById('fontSize').selectedIndex = 2
 
   lightTheme()
