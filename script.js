@@ -17,7 +17,7 @@ const fontInfo = [
 
 // Creating font cards
 const main = document.querySelector('main')
-const selectedSize = document.getElementById('font-size')
+const selectedSize = document.getElementById('fontSize')
 
 for (let i = 0; i < fontInfo.length; i++) {
   let info = document.createTextNode(`${fontInfo[i].fontFamily}`)
@@ -53,15 +53,18 @@ for (let i = 0; i < fontInfo.length; i++) {
 // Changes sample text to provided input
 sampleP = document.querySelectorAll('p:nth-child(4)')
 const selectedInput = document.getElementById('sampleInput')
-selectedInput.addEventListener('input', (event) => {
+function setSampleText(string) {
   if (selectedInput.value === 'Type something' || selectedInput.value === '') {
     sampleText = 'Then came the night of the first falling star.'
   } else {
-    sampleText = event.target.value
+    sampleText = string
   }
   for (let i = 0; i < sampleP.length; i++) {
     sampleP[i].textContent = sampleText
   }
+}
+selectedInput.addEventListener('input', (event) => {
+  setSampleText(event.target.value)
 })
 
 // Changes sample text to selected size
@@ -83,3 +86,18 @@ function lightTheme() {
   document.querySelector('body').style.backgroundColor = 'white'
   document.querySelector('body').style.color = 'black'
 }
+
+// Reset all input fields
+const resetBtn = document.getElementById('reset')
+resetBtn.addEventListener('click', () => {
+  selectedInput.value = ''
+  setSampleText()
+
+  for (i = 0; i < sampleP.length; i++) {
+    let sampleStyle = sampleP[i].getAttributeNode('style')
+    sampleStyle.value = `font-family: ${fontInfo[i].fontFamily}; font-size: 32px`
+  }
+  document.getElementById('fontSize').selectedIndex = 2
+
+  lightTheme()
+})
